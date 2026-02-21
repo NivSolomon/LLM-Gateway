@@ -2,7 +2,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { ILLMProvider } from "../core/interfaces/illm-provider.js";
 import type { LLMResponse } from "../core/types/llm-response.js";
 
-const MODEL = "gemini-1.5-flash";
+// Free tier supported (e.g. 10 RPM, 250 RPD). Use API key from https://aistudio.google.com/app/apikey
+const MODEL = "gemini-2.5-flash";
 
 export class GeminiProvider implements ILLMProvider {
   private model: ReturnType<GoogleGenerativeAI["getGenerativeModel"]>;
